@@ -1,6 +1,8 @@
 import streamlit as st
 
-st.title("🎈 My new app")
+st.title("Fibromialgia")
+st.header("Dor musculoesquelética", divider=True)
+st.subheader("Entenda o que é a sídrome, que foi reconhecida como deficiência em 2026.")
 st.write(
-    "Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
+    "Entenda o que é a sídrome, que foi reconhecida como deficiência em 2026."
 )
