@@ -1,7 +1,26 @@
 import streamlit as st
+from streamlit_lottie import st_lottie
 
-st.subheader("Quer compartilhar sua experiência ou tirar alguma dúvida? Nos mande uma mensagem:")
-st.write("Para nos mandar sua mensagem, preencha o formulário, conforme solicitado abaixo:")
+#FUNÇÃO PARA CARREFAR ANIMACAO COM .JSON#
+
+#def carregar_animacao(url: str):
+    #requisicao = requests.get(url)
+    #if requisicao.status_code != 200:
+     #   return None
+    #return requisicao.json()
+
+
+st.components.v1.html(
+    """
+    <iframe
+        src="https://lottie.host/embed/b7562919-d97a-48ba-84c9-a386ca7797f1/G3LsyAyVCy.lottie"
+        style="width: 150px; height: 200px; border: none;"
+    ></iframe>
+    """,
+    height=190,
+)
+st.markdown("<h2 style='color: #00416d; font-weight: bold;'>Quer compartilhar sua experiência ou tirar alguma dúvida? Nos mande uma mensagem:</h2>", unsafe_allow_html=True)
+st.markdown(":blue[**Para nos mandar sua mensagem, preencha o formulário, conforme solicitado abaixo:**]")
 
 with st.form("formCadastro"):
    nome = st.text_input("Informe o seu nome completo", placeholder="Nome Completo")
@@ -25,3 +44,4 @@ with st.form("formCadastro"):
   #     st.write("Data de Nascimento:", dataNascimento)
   #      st.write("Portador de Fibromialgia?", portador)
   #      st.write("Mensagem:", texto)
+
